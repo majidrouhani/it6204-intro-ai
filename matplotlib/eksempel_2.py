@@ -1,4 +1,3 @@
-#Importing pyplot
 from matplotlib import pyplot as plt
 
 x=[1,2,3,4]

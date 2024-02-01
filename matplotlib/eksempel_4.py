@@ -1,27 +1,15 @@
-#Importing pyplot
 from matplotlib import pyplot as plt
 import numpy as np
-import math
 
-while True:
-    lower_limit=int(input("Oppgi nedre grense for x: "))
-    upper_limit=int(input("Oppgi øvre grense for x: "))
-    step=float(input("Oppgi steg: "))
-    f=input("Skriv inn funksjonen f(x): ")
+x=np.array(range(-5,6))
 
-    if lower_limit>=upper_limit:
-        print("Øvre grense må være større enn nedre grense!")
-    else:
-        break
+def f(x):
+    return 2*x**2-4
 
-
-x=np.arange(lower_limit,upper_limit,step)
-y=eval(f)
-
-plt.title('f(x)='+f)
+plt.title('f(x)=2x^2-4')
 plt.ylabel('Y akse')
 plt.xlabel('X akse')
 
-plt.plot(x,y)
+plt.plot(x,f(x))
 
 plt.show()
